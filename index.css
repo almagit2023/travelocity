@@ -1,3 +1,5 @@
+@import "./_grid.css";
+
 .container {
   width: 80%;
   margin: 0 auto;
@@ -154,7 +156,7 @@ main {
 
 .card {
   float: left;
-  width: 32%;
+  /* width: 32%; */
   border: 1px solid gray;
   padding: 4px 8px;
   padding-bottom: 20px;
@@ -199,7 +201,7 @@ main {
 
 .card:nth-child(3) {
   float: right;
-  margin-left: calc((100% - 96%) / 2);
+  /* margin-left: calc((100% - 96%) / 2); */
 }
 
 .card button {
@@ -233,4 +235,98 @@ main {
   padding: 4px 8px;
   background: green;
   color: #fff;
+}
+
+@media screen and (max-width:478px) {
+  .container__main-block--sidebar {
+    display: block;
+    width: 100%;
+    background-color: greenyellow;
+    height: 100px;
+  }
+
+  .container__main-block--form {
+    display: flex;
+  }
+
+  .container__header h1 {
+    width: 52%;
+    position: relative;
+    left: -50px;
+    font-size: 36px;
+
+  }
+
+  .card {
+    float: none;
+    height: 460px;
+  }
+
+  .container__main-block--form input[type="submit"] {
+    width: 100px;
+  }
+
+  .container__main-block--form input[type="text"] {
+    height: 30px;
+  }
+
+  .container__main-block--form {
+    width: fit-content;
+    text-align: left;
+  }
+
+  .container__navigation ul li:not(:first-child) {
+    margin-left: 0px;
+  }
+
+  .container__navigation ul li {
+    width: 120px;
+  }
+
+  .container__navigation {
+    position: relative;
+    top: -100px;
+    left: -75px;
+    float: right;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .container__main-block--main-content {
+    width: 100%;
+  }
+
+  .container__main-block--sidebar {
+    display: block;
+    width: 100%;
+    background-color: greenyellow;
+    height: 100px;
+  }
+
+  .container__navigation ul li {
+    width: 120px;
+  }
+
+  .container__navigation {
+    position: relative;
+    top: -140px;
+    left: -75px;
+    float: right;
+  }
+
+  .card {
+    float: none;
+    height: 425px;
+  }
+
+}
+
+@media screen and (max-width:1024px) {
+  .container__main-block--cards {
+    width: 100%;
+  }
+
+  .container__navigation ul li {
+    width: 120px;
+  }
 }
